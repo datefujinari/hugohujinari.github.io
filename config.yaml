@@ -12,57 +12,75 @@ pygmentsUseClasses: true
 module:
   imports:
   - path: github.com/kdevo/osprey-delight/v5
-  # useful for local development of the theme:
-  # replacements:
+  # useful for local development of the theme:テーマのローカル開発に役立ちます:
+  # replacements:置換:
   # - github.com/kdevo/osprey-delight/v5 -> ../../.
 
-## Generic theme parameters:
+## Generic theme parameters:一般的なテーマパラメータ:
 Params:
   author:
     name: "kdevo"
   description: "Osprey Delight: Example Site"
 
-  # logoBig appears at the top of the page. Use a path relative to the assets dir for auto-resizing. 
+  # logoBig appears at the top of the page. Use a path relative to the assets dir for auto-resizing.
+  # ページ上部にロゴが大きく表示されます。 自動サイズ変更には、アセット ディレクトリに対する相対パスを使用します。
   logoBig: "osprey-delight.png"
 
   # logoSmall is the logo that will be shown in the left corner of the nav bar.
+  # logoSmall は、ナビゲーション バーの左隅に表示されるロゴです。
   #   Use a path relative to the assets dir for auto-resizing.
+  #   自動サイズ変更には、アセット ディレクトリに対する相対パスを使用します。
   logoSmall: "favicon.png"
   
   # background can optionally be specified as an image layer behind logoBig at the top of the page (parallax effect).
+  # オプションで、背景をページ上部の logoBig の後ろの画像レイヤーとして指定できます (視差効果)。
   #background: "background.jpg"
   
   # opengraphImage specifies the image that is shown when previewing the site in a messenger or Google Search.
+  # opengraphImage は、メッセンジャーまたは Google 検索でサイトをプレビューするときに表示される画像を指定します。
   opengraphImage: "/images/osprey-delight.png"
 
   # favicon of the site (e.g. smaller version of logoSmall).
+  # サイトのファビコン (例: logoSmall の小さいバージョン)。
   favicon: "favicon.png"
 
   # theme your site by choosing one of the themes under assets/sass/themes:
-  #   - delight is the light version of osprey-delight
-  #   - dedark is the dark version of "delight"
+  # サイトのテーマを設定するには、assets/sass/messages でテーマの 1 つを選択します。
+  #   - delight is the light version of osprey-delight <-delight は osprey-delight の軽量バージョンです
+  #   - dedark is the dark version of "delight" <-dedark は「delight」のダークバージョンです
   #   - origin is the legacy version (similar to https://github.com/tomanistor/osprey)
+  #    オリジンはレガシーバージョンです (https://github.com/tomanistor/osprey に似ています)
   theme: "delight"
 
   # tagline (followed by a cursor) is shown at the top, below the logo
   #tagline: "Welcome!"
   # mdTagline can be used instead to specify the tagline in Markdown for more customizability.
   #   Note that {cursor} is a placeholder and will be replaced by the actual cursor HTML when rendering.
+  # タグライン (カーソルが後に続く) が上部のロゴの下に表示されます
+  #キャッチフレーズ: 「ようこそ!」
+  # よりカスタマイズしやすくするために、代わりに mdTagline を使用して Markdown でタグラインを指定できます。
+  # {cursor} はプレースホルダーであり、レンダリング時に実際のカーソル HTML に置き換えられることに注意してください。
   mdTagline: "# Welcome!\n ## This is Osprey Delight{cursor}"
 
   # enforceSinglePage will enforce redirection to the baseURL for all sub-directories/-pages.
   #   Example: If you create about.md, Hugo will also create a '/about/index.html' which might not be what you want for a *single* page site. 
   #   If this switch is enabled, all these "orphan" files will contain only a redirect directive.
+  # enforceSinglePage は、すべてのサブディレクトリ/ページのベース URL へのリダイレクトを強制します。
+  # 例: about.md を作成すると、Hugo は '/about/index.html' も作成しますが、これは *単一* ページのサイトに必要なものではない可能性があります。
+  # このスイッチが有効な場合、これらすべての「孤立した」ファイルにはリダイレクト ディレクティブのみが含まれます。
   enforceSinglePage: false
 
   # copyright flag generates a copyright notice in footer of your site.
+  # 著作権フラグを使用すると、サイトのフッターに著作権表示が生成されます。
   copyright: true
 
   # credit to the theme. If you want to support the theme by please leave this in, it's kept very tiny and short.
+  # テーマの功績です。 このテーマをサポートしたい場合は、これを残してください。非常に小さく短く保たれています。
   # credit: true
 
-## Social links in footer:
+## Social links in footer:フッター内のソーシャル リンク:
 ##   The type specifies the icon to use. For more information, see: 
+## タイプは使用するアイコンを指定します。 詳細については、以下を参照してください。
 ##   https://github.com/kdevo/osprey-delight/blob/dev/CUSTOMIZING.md#icons
   Social:
   - type: twitter # references the icon to use
@@ -78,30 +96,41 @@ Params:
   - type: spotify
     url: https://open.spotify.com/artist/5NhBOdJh6T1tgtM5Au1Opl
 
-## Additional theme features:
+## Additional theme features:追加のテーマ機能:
   Feat:
     # ajaxBasin requires Basin setup for a free contact form (see instructions in README).
+    # ajaxBasin では、無料の問い合わせフォーム用に Basin をセットアップする必要があります (README の手順を参照)。
     ajaxBasin: "https://usebasin.com/f/{YOUR-12-CHAR-FORM-KEY-HERE}"
 
     # useStructuredData for your own https://schema.org/Person (SEO-friendly).
     #   This will be auto-generated dependent on the information you provide in this configuration.
+    # 独自の https://schema.org/person に StructuredData を使用します (SEO に適しています)。
+    # これは、この設定で指定した情報に応じて自動生成されます。
     useStructuredData: true
 
     # structuredDataGitHubUser will tell the theme to use your USERNAME for querying the GitHub API to fetch more information about you for structured data.
     #   This will use information that is publically available about your GitHub user profile at https://api.github.com/users/{USERNAME}.
     #structuredDataGitHubUser = "USERNAME"
+    # StructuredDataGitHubUser は、GitHub API にクエリを実行して構造化データに関する詳細情報を取得するために USERNAME を使用するようにテーマに指示します。
+    # これには、https://api.github.com/users/{USERNAME} で GitHub ユーザー プロファイルについて公開されている情報が使用されます。
+    #structuralDataGitHubUser = "ユーザー名"
 
     # useTermynal enables Termynal (https://github.com/ines/termynal), a small JS library for showing a terminal "animation" from within your gallery item.
     #   The library has been stripped-down to a minimum to only have the necessary functionality.
+    # useTermynal は、ギャラリー アイテム内から端末の「アニメーション」を表示するための小さな JS ライブラリである Termynal (https://github.com/ines/termynal) を有効にします。
+    # ライブラリは最小限に削ぎ落とされ、必要な機能のみが含まれています。
     useTermynal: true
 
     googleTagManager: ""
 
     # notifyOnNewThemeVersion enables a notification for every new minor/major version of this theme.
     #   Whenever there is a new one, a warning is printed to console.
+    # NoticeOnNewThemeVersion は、このテーマの新しいマイナー/メジャー バージョンごとに通知を有効にします。
+    # 新しいものが存在するたびに、警告がコンソールに出力されます。
     notifyOnNewThemeVersion: true
   
   # Image resizing can be configured here (see README for more info):
+  # 画像のサイズ変更はここで設定できます (詳細については README を参照してください):
   Image:
     Logo:
       resize: "600x"
@@ -114,6 +143,7 @@ Params:
       resizeLQIP: "256x"
 
   # Advanced configuration for lazyimg module (comment out if needed):
+  # Lazyimg モジュールの詳細設定 (必要に応じてコメントアウト):
   # lazyimg:
   #   resizer: auto
   #   renderer: lqip-webp
@@ -130,16 +160,19 @@ Params:
   #   noscript: true
       
 
-## Menu items are automatically added to navbar.
+## Menu items are automatically added to navbar.メニュー項目はナビゲーションバーに自動的に追加されます。
 ##   See: https://gohugo.io/content-management/menus/#add-content-to-menus
 Menu:
   Main:
     - name: "About"
       # identifier controls the section type (and therewith the appearence).
+      # 識別子はセクションのタイプ (および外観) を制御します。
       identifier: about 
       # url must be an anchor, for smooth scrolling to it when clicking on the menu item.
+      # メニュー項目をクリックしたときにスムーズにスクロールできるように、URL はアンカーである必要があります。
       url: "/#about"
       # weight controls the order of the menu items.
+      # 重みはメニュー項目の順序を制御します。
       weight: 1
     - name: "Work"
       identifier: gallery
